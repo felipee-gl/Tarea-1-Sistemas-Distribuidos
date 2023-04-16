@@ -23,7 +23,7 @@ async function Data() {
   const max = 20;
   let ids = Math.floor(Math.random() * (max - min + 1)) + min; //ALEATORIDAD
   ids = ids.toString();
-  const tiempoExpiracion = 15; //TTL
+  const tiempoExpiracion = 10; //TTL
 
   try {
     
@@ -112,10 +112,3 @@ measureResponseTimes().then(responseTimes => {
     }
   });
 });
-
-
-// Método para enviar datos a la caché
-async function enviarDatosALaCache(key, value) {
-  // Lógica para enviar los datos a la caché, dependiendo de la implementación específica de la caché utilizada
-  // Puede ser una función personalizada o una llamada a una API o servicio externo, según cómo esté configurada la caché en tu sistema
-}
