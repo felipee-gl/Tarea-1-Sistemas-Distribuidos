@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  redis1:
+    image: bitnami/redis:7.0.10
+    ports:
+      - "6379:6379"
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_MAXMEMORY_POLICYallkeys=lru
+      - REDIS_MAXMEMORY=2mb             # Agregar el tamaño de la memoria caché aquí
+  redis2:
+    image: bitnami/redis:7.0.10
+    ports:
+      - "6380:6379"
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_MAXMEMORY_POLICYallkeys=lru
+      - REDIS_MAXMEMORY=2mb 
+  redis3:
+    image: bitnami/redis:7.0.10
+    ports:
+      - "6381:6379"
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_MAXMEMORY_POLICYallkeys=lru
+      - REDIS_MAXMEMORY=2mb 
